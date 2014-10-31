@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+
+  <Identity Name="aa077843-14a5-480e-b5e6-f7f143a3a705"
+            Publisher="CN=mdotson"
+            Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>CashDrawersApp</DisplayName>
+    <PublisherDisplayName>mdotson</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="CashDrawersApp.App">
+        <m2:VisualElements
+            DisplayName="CashDrawersApp"
+            Square150x150Logo="Assets\Logo.png"
+            Square30x30Logo="Assets\SmallLogo.png"
+            Description="CashDrawersApp"
+            ForegroundText="light"
+            BackgroundColor="#464646">
+            <m2:SplashScreen Image="Assets\SplashScreen.png" />
+        </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <m2:DeviceCapability Name="bluetooth.rfcomm">
+      <m2:Device Id="any">
+        <m2:Function Type="name:serialPort"/>
+      </m2:Device>
+    </m2:DeviceCapability>
+    <m2:DeviceCapability Name="humaninterfacedevice">
+      <m2:Device Id="vidpid:07C5 0500">
+        <m2:Function Type="usage:00F0 *"/>
+      </m2:Device>
+    </m2:DeviceCapability>
+  </Capabilities>
+</Package>
